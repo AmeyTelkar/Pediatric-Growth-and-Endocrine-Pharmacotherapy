@@ -1,20 +1,14 @@
----
-
-> **Copyright © 2026 Atherv D. Telkar & Amey D. Telkar. All Rights Reserved.**
->
+ > **Copyright © 2026 Atherv D. Telkar & Amey D. Telkar. All Rights Reserved.**
+> 
 > All datasets, the 13-step FAERS preprocessing pipeline, the two-stage clinical imputation scheme, ML training framework, and associated works are **original intellectual creations** of the named copyright owners, created entirely using personal computing resources.
->
-> Protected under:
-> - Section 17, **Indian Copyright Act, 1957**
-> - **Berne Convention** (automatic protection in 181 member countries)
->
+> 
+> Protected under: Section 17, **Indian Copyright Act, 1957** · **Berne Convention** (181 member countries)
+> 
 > **MIT Vishwaprayag University holds NO intellectual property rights over any part of this work.**
->
-> Reproduction, modification, redistribution, or commercial use of the pipeline, datasets, or methodology without **explicit written permission from both copyright owners** is strictly prohibited.
->
-> **Contact:**
-> - Atherv D. Telkar — athervtelkar08@gmail.com
-> - Amey D. Telkar — ameytelkar08@gmail.com
+> 
+> Reproduction, modification, redistribution, or commercial use without **explicit written permission from both copyright owners** is strictly prohibited.
+> 
+> Contact: athervtelkar08@gmail.com (Atherv D. Telkar) · ameytelkar08@gmail.com (Amey D. Telkar)
 
 ---
 
