@@ -26,10 +26,18 @@ This repository contains the dataset and verified reference list for the study:
 ## Repository Contents
 
 ### `Growth and Endocrine Model/`
-- `EndocrineAll_Drugs_Pediatric_14Columns_Imputed.xlsx` — 14-column leakage-aware model dataset (N=44,431)
-- `EndocrineAll_Drugs_Pediatric_15Columns_Imputed.xlsx` — 15-column sanity-check model dataset
-- `Endocrine_Counts_2021_2025.xlsx` — Quarter-wise cohort counts per drug class (2021Q1–2025Q4)
-- `ML_Multiclass_Model_Comparison_Results.xlsx` — XGBoost and Random Forest performance metrics
+
+> **Note:** GitHub cannot preview `.xlsx` files. Use the **CSV files** below to view data directly in GitHub. Download the `.xlsx` files for full Excel access.
+
+| File | Format | Description |
+|---|---|---|
+| `EndocrineAll_14Columns_Preview.csv` | CSV ✅ GitHub preview | First 500 rows of the 14-column leakage-aware dataset |
+| `EndocrineAll_Drugs_Pediatric_14Columns_Imputed.xlsx` | Excel (download) | Full 14-column leakage-aware model dataset (N=44,431) |
+| `EndocrineAll_Drugs_Pediatric_15Columns_Imputed.xlsx` | Excel (download) | Full 15-column sanity-check model dataset (N=44,431) |
+| `Endocrine_Counts_2021_2025.csv` | CSV ✅ GitHub preview | Quarter-wise cohort counts per drug class (2021Q1–2025Q4) |
+| `Endocrine_Counts_2021_2025.xlsx` | Excel (download) | Same — Excel version |
+| `ML_Model_Results.csv` | CSV ✅ GitHub preview | XGBoost and Random Forest performance metrics |
+| `ML_Multiclass_Model_Comparison_Results.xlsx` | Excel (download) | Same — Excel version |
 
 ### `Growth and Endocrine Model/Journal References/`
 - `VERIFIED_REFERENCES.md` — All 24 paper citations with confirmed DOIs and PMC free-download links

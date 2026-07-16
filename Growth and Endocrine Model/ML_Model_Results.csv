@@ -1,0 +1,7 @@
+Growth and Endocrine Disorders Cohort Model Results (Ages 0-17),Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7
+,,,,,,,
+Model Version,Feature Dimension,Total Records,Missing outc_cod %,Num Classes,Model Name,Accuracy,Macro-F1
+14-Column (Leakage-Free),13,44431,73.56%,7,Random Forest,0.8699223585011815,0.488935345089378
+14-Column (Leakage-Free),13,44431,73.56%,7,XGBoost,0.8728479801957916,0.490277060707547
+15-Column (With Leakage),14,44431,73.56%,7,Random Forest,0.9627545853493867,0.9309146810281356
+15-Column (With Leakage),14,44431,73.56%,7,XGBoost,0.9746821199504895,0.970372044150905
