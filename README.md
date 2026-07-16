@@ -1,11 +1,13 @@
-﻿# Pediatric Growth and Endocrine Pharmacotherapy — FAERS ML Framework
+# Pediatric Growth and Endocrine Pharmacotherapy — FAERS ML Framework
 
 ## Overview
-This repository contains the dataset, LaTeX paper, and verified reference list for the study:
+This repository contains the dataset and verified reference list for the study:
 
 **"Machine Learning-Based Outcome Severity Classification in Pediatric Growth and Endocrine Pharmacotherapy: A FAERS Cohort Study (2021–2025)"**
 
 **Authors:** Atherv D. Telkar, Amey D. Telkar, Aarav Javalgikar, Nachiket Madanwale, Deepak Ruikar, Pramod Baligar
+
+> **Note:** The LaTeX journal paper (`EndocrineDrugs.tex`) is kept private and is **NOT** included in this public repository.
 
 ---
 
@@ -18,14 +20,12 @@ This repository contains the dataset, LaTeX paper, and verified reference list f
 - `ML_Multiclass_Model_Comparison_Results.xlsx` — XGBoost and Random Forest performance metrics
 
 ### `Growth and Endocrine Model/Journal References/`
-- `VERIFIED_REFERENCES.md` — All 24 paper citations with confirmed DOIs and access links
-
-### `Research paper latex/`
-- `EndocrineDrugs.tex` — Full Q1-journal-quality LaTeX paper
+- `VERIFIED_REFERENCES.md` — All 24 paper citations with confirmed DOIs and PMC free-download links
 
 ---
 
 ## Key Results
+
 | Model | Columns | Accuracy | Macro-F1 |
 |---|---|---|---|
 | XGBoost | 14 (leakage-aware) | **87.28%** | **0.4903** |
@@ -37,21 +37,61 @@ This repository contains the dataset, LaTeX paper, and verified reference list f
 ---
 
 ## Drug Classes Covered
-- Somatropin (rhGH): n = 31,948
-- Levothyroxine: n = 6,523
-- Hydrocortisone: n = 5,035
-- Leuprolide (GnRH agonist): n = 1,970
-- Methimazole: n = 283
+- **Somatropin (rhGH):** n = 31,948
+- **Levothyroxine:** n = 6,523
+- **Hydrocortisone:** n = 5,035
+- **Leuprolide (GnRH agonist):** n = 1,970
+- **Methimazole:** n = 283
+
+---
+
+## 13-Step FAERS Preprocessing Pipeline — Copyright Protected
+
+The deterministic 13-step FAERS preprocessing pipeline is an **original intellectual contribution** of the named copyright owners, developed entirely using personal computing resources. This pipeline is described in the associated journal paper and is protected under copyright law.
+
+| Step | Description |
+|---|---|
+| **Step 0** | Raw FAERS file ingestion (header-based automatic file-type detection across all 20 quarters) |
+| **Step 1** | High-sparsity column removal (>90% null threshold) — removes ~1.4M null cells per quarter |
+| **Step 2** | Four-level case deduplication: caseversion → i_f_code (F preferred) → fda_dt → primaryid |
+| **Step 3** | Age normalisation — 6 unit variants (years, months, weeks, days, hours, decades) → decimal years |
+| **Step 4** | ICH E11(R1) age-band assignment: neonate, infant, toddler, child, pre-adolescent, adolescent (0–17 y) |
+| **Step 5** | Weight unit harmonisation (lbs → kg via 0.453592 factor) |
+| **Step 6** | Configurable age filter — restricted to 0–17 years for endocrine cohort |
+| **Step 7** | Null-safe date standardisation (event and FDA receipt dates) |
+| **Step 8** | Primary-ID pre-join filtering before DEMO/DRUG/REAC table merge |
+| **Step 9** | val_vbm = 2 invalid weight record removal |
+| **Step 10** | Drug name normalisation: RxNorm API (94% match) + RapidFuzz fuzzy match (6% fallback) |
+| **Step 11** | Seven-level outcome severity scale encoding: RI < DS < CA < LT < DE < HO < OT |
+| **Step 12** | Indication text cleaning (handles 49.16% missingness) |
+| **Step 13** | Human Approve/Reject quality gate with full deterministic audit trail |
+
+> The **i_f_code** follow-up/initial tie-break at Step 2 and the **two-stage clinical imputation** scheme (AE-specific mode imputation → clinical-indicator hierarchical fallback) are original contributions not documented in any reviewed pharmacovigilance publication.
+
+---
+
+## Copyright
+
+**Copyright © 2026 Atherv D. Telkar & Amey D. Telkar. All Rights Reserved.**
+
+All datasets, the 13-step FAERS preprocessing pipeline, the two-stage clinical imputation scheme, ML training framework, and associated works are **original intellectual creations** of the named copyright owners, created entirely using personal computing resources.
+
+Protected under:
+- Section 17, **Indian Copyright Act, 1957**
+- **Berne Convention** (automatic protection in 181 member countries)
+
+**MIT Vishwaprayag University holds NO intellectual property rights over any part of this work.**
+
+Reproduction, modification, redistribution, or commercial use of the pipeline, datasets, or methodology without **explicit written permission from both copyright owners** is strictly prohibited.
+
+**Contact:**
+- Atherv D. Telkar — athervtelkar08@gmail.com
+- Amey D. Telkar — ameytelkar08@gmail.com
 
 ---
 
 ## Citation
-If you use this dataset or framework, please cite:
-Telkar A, Telkar A, et al. *Machine learning-based outcome severity classification in pediatric growth and endocrine pharmacotherapy: a FAERS cohort study (2021–2025)*. [Preprint, 2026].
+If referencing this work or pipeline, please cite:
 
----
-
-## License / Copyright
-All datasets, code, pipeline, and paper are original works by the named copyright owners.
-MIT Vishwaprayag University holds no intellectual property rights over this work.
-Copyright vests exclusively with the named individuals under Section 17, Indian Copyright Act, 1957.
+> Telkar A, Telkar A, Javalgikar A, Madanwale N, Ruikar D, Baligar P.
+> *Machine learning-based outcome severity classification in pediatric growth and endocrine pharmacotherapy: a FAERS cohort study (2021–2025)*. [Preprint, 2026].
