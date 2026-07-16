@@ -1,0 +1,13 @@
+# Git Binary File Rules - prevents Git from corrupting binary files
+
+# Excel files - treat as binary (no line-ending conversion)
+*.xlsx binary
+*.xls  binary
+*.xlsm binary
+
+# Other common binary types
+*.pdf  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.zip  binary
