@@ -1,3 +1,23 @@
+---
+
+> **Copyright © 2026 Atherv D. Telkar & Amey D. Telkar. All Rights Reserved.**
+>
+> All datasets, the 13-step FAERS preprocessing pipeline, the two-stage clinical imputation scheme, ML training framework, and associated works are **original intellectual creations** of the named copyright owners, created entirely using personal computing resources.
+>
+> Protected under:
+> - Section 17, **Indian Copyright Act, 1957**
+> - **Berne Convention** (automatic protection in 181 member countries)
+>
+> **MIT Vishwaprayag University holds NO intellectual property rights over any part of this work.**
+>
+> Reproduction, modification, redistribution, or commercial use of the pipeline, datasets, or methodology without **explicit written permission from both copyright owners** is strictly prohibited.
+>
+> **Contact:**
+> - Atherv D. Telkar — athervtelkar08@gmail.com
+> - Amey D. Telkar — ameytelkar08@gmail.com
+
+---
+
 # Pediatric Growth and Endocrine Pharmacotherapy — FAERS ML Framework
 
 ## Overview
@@ -47,7 +67,7 @@ This repository contains the dataset and verified reference list for the study:
 
 ## 13-Step FAERS Preprocessing Pipeline — Copyright Protected
 
-The deterministic 13-step FAERS preprocessing pipeline is an **original intellectual contribution** of the named copyright owners, developed entirely using personal computing resources. This pipeline is described in the associated journal paper and is protected under copyright law.
+The deterministic 13-step FAERS preprocessing pipeline is an **original intellectual contribution** of the named copyright owners, developed entirely using personal computing resources.
 
 | Step | Description |
 |---|---|
@@ -67,26 +87,6 @@ The deterministic 13-step FAERS preprocessing pipeline is an **original intellec
 | **Step 13** | Human Approve/Reject quality gate with full deterministic audit trail |
 
 > The **i_f_code** follow-up/initial tie-break at Step 2 and the **two-stage clinical imputation** scheme (AE-specific mode imputation → clinical-indicator hierarchical fallback) are original contributions not documented in any reviewed pharmacovigilance publication.
-
----
-
-## Copyright
-
-**Copyright © 2026 Atherv D. Telkar & Amey D. Telkar. All Rights Reserved.**
-
-All datasets, the 13-step FAERS preprocessing pipeline, the two-stage clinical imputation scheme, ML training framework, and associated works are **original intellectual creations** of the named copyright owners, created entirely using personal computing resources.
-
-Protected under:
-- Section 17, **Indian Copyright Act, 1957**
-- **Berne Convention** (automatic protection in 181 member countries)
-
-**MIT Vishwaprayag University holds NO intellectual property rights over any part of this work.**
-
-Reproduction, modification, redistribution, or commercial use of the pipeline, datasets, or methodology without **explicit written permission from both copyright owners** is strictly prohibited.
-
-**Contact:**
-- Atherv D. Telkar — athervtelkar08@gmail.com
-- Amey D. Telkar — ameytelkar08@gmail.com
 
 ---
 
