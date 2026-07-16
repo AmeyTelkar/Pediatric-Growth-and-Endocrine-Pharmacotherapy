@@ -21,8 +21,6 @@ This repository contains the dataset and verified reference list for the study:
 
 **Authors:** Atherv D. Telkar, Amey D. Telkar, Aarav Javalgikar, Nachiket Madanwale, Deepak Ruikar, Pramod Baligar
 
-> **Note:** The LaTeX journal paper (`EndocrineDrugs.tex`) is kept private and is **NOT** included in this public repository.
-
 ---
 
 ## Repository Contents
